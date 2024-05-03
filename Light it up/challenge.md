@@ -21,14 +21,14 @@ What is the minimum number of operations needed to illuminate to ensure that eve
 
 ## Example 1
 input:
-`5`
-`1 0 0 1 0`
+5\
+1 0 0 1 0\
 output:
-`2`
+2
 
 ## Example 2
 input:
-`2`
-`1 1`
+2\
+1 1\
 output:
 0
