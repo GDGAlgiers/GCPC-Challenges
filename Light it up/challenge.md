@@ -20,15 +20,15 @@ What is the minimum number of operations needed to illuminate to ensure that eve
 - 0 <= n <= 10^6
 
 ## Example 1
-input:
+input:\
 5\
 1 0 0 1 0\
-output:
+output:\
 2
 
 ## Example 2
-input:
+input:\
 2\
 1 1\
-output:
+output:\
 0
