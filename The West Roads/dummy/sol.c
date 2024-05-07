@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 long solve(long x) {
-    return x * (x - 1) / 2;
+    long sum = 0;
+    for (long i = 1; i < x; i++) {
+        sum += i;
+    }
+    return sum;
 }
 
 int main(int argc, char *argv[]) {
