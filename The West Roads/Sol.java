@@ -9,7 +9,7 @@ public class Sol {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         try {
-            long x = Integer.parseInt(scanner.nextLine());
+            long x = Long.parseLong(scanner.nextLine());
 
             System.out.println(solve(x));
         } finally {
