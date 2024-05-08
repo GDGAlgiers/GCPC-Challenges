@@ -2,14 +2,14 @@ using System;
 
 class Program
 {
-    static long Solve(int x)
+    static long Solve(long x)
     {
         return x * (x - 1) / 2;
     }
 
     static void Main(string[] args)
     {
-        int x = int.Parse(Console.ReadLine());
+        long x = long.Parse(Console.ReadLine());
         Console.WriteLine(Solve(x));
     }
 }
