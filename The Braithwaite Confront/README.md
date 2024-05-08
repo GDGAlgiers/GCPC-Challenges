@@ -1,6 +1,10 @@
 
 # The Braithwaite Confront (Easy)
 
+### Submission Constraints
+- Time limit per test: **0.02 seconds**
+- Memory limit per test: **Default (65 MB)**
+
 ## Description
 Dutch and the gang are planning to confront the Braithwaite family. The gang decides to move their camps located at different points on the map to Shady Belle to establish a more secure position before engaging in a confrontation with the Braithwaites. During this time, the gang works together to relocate their supplies.
 
