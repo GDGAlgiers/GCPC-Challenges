@@ -105,6 +105,8 @@ motifs = []
 for line in sys.stdin:
     if lineIndex == 0:
         base = int(line)
+    elif lineIndex == 1:
+        limit = int(line) + 2
     else:
         motifs.append(line.split('\n')[0])
     lineIndex += 1

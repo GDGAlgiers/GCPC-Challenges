@@ -125,16 +125,20 @@ function calculateCodage(str, base) {
   }
 const inputs = []
 let index = 0
-const limit = 6
+let limit = 6
 let base = 256
 let motifs =[]
 readline.on('line', (line) => {
     if(index == 0){
         base = parseInt(line)
+    }else if(index ==1){
+      limit = parseInt(line) + 2
     }else{
         inputs.push(line)
     }
-    
+    if(index ==1){
+      limit = parseInt(line) + 2
+    }
     index++
     if (index == limit) {
       readline.close()
@@ -170,8 +174,10 @@ readline.on('line', (line) => {
               if(motifsCoding.length > 1){
                   maxCodage =maxCodage* motifsCoding.length
               }
+              console.log(solutions)
           console.log(maxCodage)
       } else {
+        console.log(solutions)
           console.log(maxCodage)
       }
   
