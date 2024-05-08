@@ -1,6 +1,10 @@
 
 # Arthur’s peer-to-peer strategy
 
+### Submission Constraints
+- Time limit per test: **0.2 seconds**
+- Memory limit per test: **Default(65 MB)**
+
 ## Description
 A showdown is approaching between the Van der Linde gang and Arthur and Dutch's allies. Arthur and the Dutch allies geared up to spread across the map to fight across multiple fronts, in which they needed to establish communication to exchange data and critical information. They aimed to set up a peer-to-peer network, ensuring messages could pass securely without relying on a single messenger who might turn into a traitor.
 
