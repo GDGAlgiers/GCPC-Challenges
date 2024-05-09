@@ -29,7 +29,7 @@ let rl = require('readline').createInterface({
     input: process.stdin
 });
 
-rl.on("line", (inline) => {
+rl.on("line", (text) => {
 	rl.close();
-	console.log(sol(inline));
+	console.log(sol(text));
 });

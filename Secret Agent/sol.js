@@ -38,7 +38,7 @@ function getCombinations(arr1, arr2) {
     return combination;
 }
 
-result
+//result
 let rl = require('readline').createInterface({
     input: process.stdin
 });
