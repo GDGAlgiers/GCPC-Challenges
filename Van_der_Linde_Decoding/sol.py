@@ -27,13 +27,6 @@ def GetPairs(Message):
   return pairs
 pairs=GetPairs(L)
 
-def Affichage(Matrix):
- for i in range(len(Matrix)):
-  print("\n")
-  for j in range(len(Matrix[0])):
-    print(f" {Matrix[i][j]} \t " , end='')
- print("\n")   
-
 def FillMatrix(Matrix):
  for i in range(2,len(Matrix)):
   for j in range(2,len(Matrix[0])):
@@ -44,7 +37,7 @@ def FillMatrix(Matrix):
        
  return Matrix
 
-def initiatMatrix(seq1,seq2):
+def initiateMatrix(seq1,seq2):
   Matrix=[[0]*(len(seq1) + 2) for _ in range(len(seq2) + 2)]
   Matrix[0][0]='/'
   Matrix[0][1]='i'
@@ -69,7 +62,7 @@ def dehashMessage(pairs):
   RealMessage=''
   for seqs in pairs :
    Matrix=[]
-   Matrix=initiatMatrix(seqs[0],seqs[1])
+   Matrix=initiateMatrix(seqs[0],seqs[1])
    Matrix=FillMatrix(Matrix)
    score=Matrix[len(Matrix) -1 ][len(Matrix[0]) -1 ]
    if score in Translate : 
