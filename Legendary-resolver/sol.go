@@ -73,6 +73,9 @@ func checkCommonSequenceExistenceInMotifs(sequence string, motifs []string, inde
 						break
 					}
 				}
+				if k > 0 {
+					break
+				}
 			}
 			if k == 0 {
 				return false
@@ -136,14 +139,14 @@ func main() {
 	limit := 6
 	var base int
 	fmt.Scanf("%d\n", &base)
+	fmt.Scanf("%d\n", &limit)
 	base = int(base)
 	lineIndex = 1
 	var motifs []string
-
 	for scanner.Scan() {
 		motifs = append(motifs, scanner.Text())
 		lineIndex++
-		if lineIndex == limit {
+		if lineIndex == limit+1 {
 			break
 		}
 	}
