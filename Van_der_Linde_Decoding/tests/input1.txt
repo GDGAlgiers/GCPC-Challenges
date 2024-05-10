@@ -1,15 +1,14 @@
-_ L = ‘ARTHURT AHURT
-DEAR DEAO 
+5
+4
+ARTHURT AHURT
+DEAR DEAO
 TIHITI TIHIT
 Plaaaan Ploaaan
-HAVEPLAAAAAANNA HAVEPLOAAAAANN’
-
-_ Translate= {
-1 : ‘H’,
-2 : ‘I’,
-3 : ‘D’,
-10: ‘E’
-}
-
-_ match = 1 , mismatch = -1 , 
-add= -2
+HAVEPLAAAAAANNA HAVEPLOAAAAANN
+1 :H
+2 :I
+3 :D
+10:E
+1
+-1
+-2

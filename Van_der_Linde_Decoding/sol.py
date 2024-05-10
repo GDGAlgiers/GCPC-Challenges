@@ -1,31 +1,40 @@
-match=1
-mismatch=-1
-Indel=-2 # Add
-L ="""ARTHURT AHURT 
-TITA TATI
-ARE ASE 
-NON ONO 
-YES YOS 
-NI NAGG"""
-Translate=  {
-1 : 'I',
-3 : 'D',
-0: ' ',
-10: 'E',
--7: 'L',
--2 :'L',
--4: 'N'
-}
+import sys
 
+def get_Params():
+    pairs = []
+    translate = {}
+    nbrline = 0
+    match = 0
+    mismatch = 0
+    indel = 0
+    
+    for line in sys.stdin:
+        line = line.strip()  # Remove leading/trailing whitespace
+        
+        if nbrline == 0:
+            n = int(line)
+            nbrline = 1
+        elif nbrline == 1:
+            m = int(line)
+            nbrline = 2
+        elif nbrline > 1:
+            if nbrline <= n + 1:
+                seq1, seq2 = line.split()
+                pairs.append([seq1, seq2])
+            elif nbrline > n + 1 and nbrline < n + m + 2:
+                key, value = line.split(':')
+                translate.setdefault(int(key), value)
+            elif nbrline == n + m + 2:
+                match = int(line)
+            elif nbrline == n + m + 3:
+                mismatch = int(line)
+            elif nbrline == n + m + 4:
+                indel = int(line)
+                break
+            nbrline=nbrline+1 
+    return pairs, translate, match, mismatch, indel
 
-def GetPairs(Message):
-  lines=Message.split('\n')
-  pairs=[]
-  for line in lines:
-    seq1, seq2 = line.split()  # Split each line into seq1 and seq2
-    pairs.append([seq1, seq2]) 
-  return pairs
-pairs=GetPairs(L)
+pairs,Translate,match,mismatch,Indel=get_Params()
 
 def FillMatrix(Matrix):
  for i in range(2,len(Matrix)):
