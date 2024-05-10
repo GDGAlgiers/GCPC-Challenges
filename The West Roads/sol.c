@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int solve(int x) {
+long solve(long x) {
     return x * (x - 1) / 2;
 }
 
 int main(int argc, char *argv[]) {
-    int x;
-    scanf("%d", &x);
-    printf("%d\n", solve(x));
+    long x;
+    scanf("%ld", &x);
+    printf("%ld\n", solve(x));
     return 0;
 }

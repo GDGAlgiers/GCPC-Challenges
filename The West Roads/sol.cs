@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static int Solve(int x)
+    static long Solve(int x)
     {
         return x * (x - 1) / 2;
     }
