@@ -1,5 +1,5 @@
 import ast 
-
+import sys
 def findL(horses, l, budget):
     res = []
     if not horses : 
@@ -34,13 +34,23 @@ def findTwo(horses, budget):
     return res
 
 if __name__ == "__main__":
-    with open("input.text") as f :
-        lines = f.readlines()
-
-    results = open("solutions.txt", "w")
-
-    for line in lines:
-        horses, budget, l = map(ast.literal_eval,line.replace(", ",",").split())
-        horses.sort()
-        result = findL(horses, l, budget)
-        print(result, file=results)
+    lineIndex = 0
+    limit = 6
+    horses = []
+    budget = 0
+    l=0
+    for line in sys.stdin:
+        if lineIndex == 0:
+            limit = int(line) + 3
+        elif lineIndex >0  and lineIndex < limit - 2:
+            horses.append(int(line.split('\n')[0]))
+        elif lineIndex == limit - 2:
+            budget = int(line.split('\n')[0])
+        elif lineIndex == limit -1:
+            l = int(line.split('\n')[0])
+        lineIndex += 1
+        if lineIndex == limit:
+            break
+    horses.sort()
+    result = findL(horses, l, budget)
+    print(result)
