@@ -35,7 +35,6 @@ def get_Params():
     return pairs, translate, match, mismatch, indel
 
 pairs,Translate,match,mismatch,Indel=get_Params()
-
 def FillMatrix(Matrix):
  for i in range(2,len(Matrix)):
   for j in range(2,len(Matrix[0])):
