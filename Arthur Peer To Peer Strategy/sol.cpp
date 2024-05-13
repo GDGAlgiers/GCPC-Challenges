@@ -136,5 +136,4 @@ int main() {
 
         if (ans == infinity) cout << n << "\n";
         else cout << ans << "\n";
-    
 }

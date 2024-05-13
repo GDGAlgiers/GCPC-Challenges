@@ -12,7 +12,7 @@ stop = False
 
 for i in range(1, k + 1):
     if i in a or i in b:
-        if i in a: 
+        if i in a:
             cnt_a += 1
         if i in b:
             cnt_b += 1
