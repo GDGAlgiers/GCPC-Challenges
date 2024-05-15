@@ -4,22 +4,6 @@ const rl = readline.createInterface({
   output: process.stdout,
   terminal: false
 });
-// Indel=-2
-// match=1
-// mismatch=-1
-
-
-process.stdin.setEncoding('utf8');
-
-// let inputData = '';
-// let inputArray=[]
-// process.stdin.on('data', (chunk) => {
-//     inputArray.push(chunk)
-//     inputData += chunk;
-// });
-// process.stdin.on('end', () => {
-//   // console.log(inputArray);
-// });
 
 const get_Params= async()=>{
  let pairs = []
@@ -44,7 +28,6 @@ const get_Params= async()=>{
       }
     if( nbrline > n + 1 && nbrline < n + m + 2){
        [ key, value] = line.split(':')
-        // translate.setdefault(Number(key), value)
         translate[Number(key)] = value;
       }
     if (nbrline == n + m + 2)
@@ -112,15 +95,12 @@ const initiateMatrix=(seq1,seq2,Indel)=> {
   Matrix[0][1]='i'
   Matrix[1][0]='j'
   Matrix[1][1]=0
-  let j=2
+
   for (let i=0 ; i<seq1.length;i++){
-    Matrix[0][j]=seq1[i]
-    j++
+    Matrix[0][i+2]=seq1[i]
   }
-  j=2
   for (let i=0 ; i<seq2.length;i++){
-    Matrix[j][0]=seq2[i]
-    j++
+    Matrix[i+2][0]=seq2[i]
   }
   for (let i=2 ; i<Matrix[0].length;i++){
     Matrix[1][i]=Matrix[1][i-1] + Indel 
@@ -130,17 +110,4 @@ const initiateMatrix=(seq1,seq2,Indel)=> {
   }
   return Matrix
 }
-
-const Show_Matrix=(Matrix)=>{
- for (let i=0 ; i<Matrix.length ; i++){
-  for (let j=0; j<Matrix[0].length;j++){
-    process.stdout.write(String(Matrix[i][j]) + "\t" )
-  }
-  console.log("\n")
- }
-}
-// let Matrix = initiateMatrix('SETIN','SETING',-2)
-// Matrix=FillMatrix(Matrix,-2,-1,1)
-// Show_Matrix(Matrix)
-
 
