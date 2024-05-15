@@ -1,5 +1,5 @@
 11
-8
+7
 ABCDEF FEDCBA
 DEAR ARTHUR
 EAT WELL
@@ -14,7 +14,6 @@ AB ACB
 -5 :O
 -7 :W
 2 :A
--5:A
 4:Y
 -4:L
 -8:.
