@@ -6,12 +6,12 @@ ARE ASE
 NON ONO 
 YES YOS 
 NI NAGG
-1 :I
-3 :D
+1:I
+3:D
 0:.
 10:E
--7 :L
--2 :L
+-7:L
+-2:L
 -4:N
 1
 -1
