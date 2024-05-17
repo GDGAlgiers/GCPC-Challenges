@@ -3,9 +3,9 @@
 SFLC SGLC
 FHVMW GCTQ
 OJBBY JBBY
-0 :U
-6 :R
-8 :N
+0:U
+6:R
+8:N
 4:F
 2
 -2
